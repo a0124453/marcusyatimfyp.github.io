@@ -1,0 +1,82 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.page {
+  display: grid;
+  grid-template-areas: 
+    "header nav nav"
+    "main main main"
+    "section section section"
+    "footer footer footer";
+  grid-template-rows: 3rem 1fr 1fr 1rem;
+  grid-template-columns: repeat(3, auto);
+  justify-content: stretch;
+}
+
+.header {
+  grid-area: header;
+  background: peru;
+  color: white;
+  height: 64px;
+}
+
+.nav {
+  grid-area: nav;
+  background: peru;
+  color: white;
+  height: 64px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  grid-area: main;
+  flex-direction: column;
+  background: url(powergrid.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 552px;
+}
+
+.section {
+  grid-area: section;
+}
+
+.section, .footer {
+  padding: 1rem;
+}
+
+.footer {
+  grid-area: footer;
+  background: peru;
+  color: white;
+}
+
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
